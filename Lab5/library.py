@@ -16,3 +16,9 @@ class library:
     def show_users(self):
         for user in self.users:
             print(user.show_user_info())
+
+    def register_book(self, new_book):
+        self.books.append(book(new_book))
+
+    def register_book(self, new_user):
+        self.users.append(book(new_user))
