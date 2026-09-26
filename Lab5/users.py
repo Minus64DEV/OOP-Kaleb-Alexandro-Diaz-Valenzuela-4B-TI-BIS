@@ -7,6 +7,11 @@ class user:
         return f"User Id: {self.id} <-+-> Username: {self.name}"
 
     def borrow_a_book(library, book_id):
+        found = False
         for book in library.books:
             if (book.id == book_id):
-                book.available = False
+                found = True
+        if (found):
+            book.borrow_book()
+        else:
+            print("That book doesn't exist")
